@@ -19,7 +19,6 @@ with pkgs; [
     pkgs.eza
     pkgs.gimp
     pkgs.remmina
-    inputs.ghostty.packages."${system}".default
     pkgs.dive
     pkgs.chromedriver
     file
