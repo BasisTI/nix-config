@@ -16,7 +16,7 @@
     { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      my_username = "ubuntu";
+      my_username = "basis";
       pkgs = nixpkgs.legacyPackages.${system};
       inherit inputs;
     in
