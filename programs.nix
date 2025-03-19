@@ -34,11 +34,14 @@
       ms-vscode-remote.remote-ssh
       ms-vscode-remote.remote-containers
       angular.ng-template
+      charliermarsh.ruff
     ];
     userSettings = {
       "workbench.colorTheme" = "Default Light Modern";
       "cSpell.language" = "pt-BR,en,pt";
       "files.autoSave" = "afterDelay";
+      "ruff.nativeServer" = "on";
+      "ruff.path" = [ "/home/basis/.nix-profile/bin/ruff" ];
     };
   };
   kitty = {

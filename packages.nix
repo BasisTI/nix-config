@@ -44,4 +44,7 @@ with pkgs; [
     jetbrains.idea-community
     git 
     warp-terminal
+    uv
+    ruff
+    ruff-lsp
   ]
