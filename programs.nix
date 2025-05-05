@@ -35,6 +35,7 @@
       ms-vscode-remote.remote-containers
       angular.ng-template
       charliermarsh.ruff
+      jebbs.plantuml
     ];
     userSettings = {
       "workbench.colorTheme" = "Default Light Modern";
