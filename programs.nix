@@ -11,7 +11,7 @@
     initExtra = ''
       export EDITOR="nvim"
       export JAVA_HOME="${pkgs.jdk21}/lib/openjdk"
-      export PATH="$PATH:${pkgs.jdk21}/bin:${pkgs.nodejs_22}/bin:/home/cedric/bin"
+      export PATH="$PATH:${pkgs.jdk21}/bin:${pkgs.nodejs_22}/bin:/home/basis/bin"
     '';
   };
 
