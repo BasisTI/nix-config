@@ -7,20 +7,20 @@ with pkgs; [
     p7zip
     oh-my-posh
     inputs.zen-browser.packages."${system}".beta
-    pkgs.bat
-    pkgs.maven
-    pkgs.gradle
-    pkgs.difftastic
-    pkgs.graphviz
-    pkgs.dbeaver-bin
-    pkgs.chromium
-    pkgs.lens
-    pkgs.fzf
-    pkgs.eza
-    pkgs.gimp
-    pkgs.remmina
-    pkgs.dive
-    pkgs.chromedriver
+    bat
+    maven
+    gradle
+    difftastic
+    graphviz
+    dbeaver-bin
+    chromium
+    lens
+    fzf
+    eza
+    gimp
+    remmina
+    dive
+    chromedriver
     file
     helix
     guvcview
@@ -33,7 +33,6 @@ with pkgs; [
     devpod-desktop
     nixfmt-rfc-style
     gnome-font-viewer
-    lunarvim
     neovim
     ripgrep
     lazygit
@@ -47,4 +46,10 @@ with pkgs; [
     uv
     ruff
     ruff-lsp
+    dig
+    kubectl
+    helm
+    kubecolor
+    k9s
+    kustomize
   ]
