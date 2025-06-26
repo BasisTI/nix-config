@@ -8,5 +8,4 @@
   # NodeJS
       "node/nodejs_22".source = pkgs.nodejs_22;
       "node/nodejs_20".source = pkgs.nodejs_20;
-      "node/nodejs_18".source = pkgs.nodejs_18;  
 }
