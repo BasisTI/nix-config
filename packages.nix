@@ -41,8 +41,7 @@ with pkgs; [
     devcontainer
     neofetch
     jetbrains.idea-community
-    git 
-    warp-terminal
+    git
     uv
     ruff
     dig
