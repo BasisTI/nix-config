@@ -52,4 +52,5 @@ with pkgs; [
     kubecolor
     k9s
     kustomize
+    k3d
   ]
