@@ -45,7 +45,6 @@ with pkgs; [
     warp-terminal
     uv
     ruff
-    ruff-lsp
     dig
     kubectl
     helm
