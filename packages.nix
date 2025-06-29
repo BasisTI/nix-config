@@ -13,14 +13,12 @@ with pkgs; [
     difftastic
     graphviz
     dbeaver-bin
-    chromium
     lens
     fzf
     eza
     gimp
     remmina
     dive
-    chromedriver
     file
     helix
     guvcview
