@@ -46,7 +46,7 @@ with pkgs; [
     ruff
     dig
     kubectl
-    helm
+    kubernetes-helm
     kubecolor
     k9s
     kustomize
