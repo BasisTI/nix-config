@@ -50,4 +50,5 @@ with pkgs; [
     kustomize
     k3d
     rustdesk
+    direnv
   ]
