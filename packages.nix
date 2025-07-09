@@ -51,4 +51,5 @@ with pkgs; [
     k3d
     rustdesk
     direnv
+    nix-direnv
   ]
