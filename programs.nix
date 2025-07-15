@@ -24,6 +24,7 @@
         yzhang.markdown-all-in-one
         jnoortheen.nix-ide
         ms-azuretools.vscode-docker
+        ms-kubernetes-tools.vscode-kubernetes-tools
         tamasfe.even-better-toml
         redhat.vscode-yaml
         redhat.vscode-xml

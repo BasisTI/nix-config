@@ -52,4 +52,5 @@ with pkgs; [
     rustdesk
     direnv
     nix-direnv
+    sqlfluff
   ]
