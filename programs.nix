@@ -17,32 +17,34 @@
 
   vscode = {
     enable = true;
-    enableUpdateCheck = false;
-    enableExtensionUpdateCheck = false;
-    extensions = with pkgs.vscode-extensions; [
-      yzhang.markdown-all-in-one
-      jnoortheen.nix-ide
-      ms-azuretools.vscode-docker
-      tamasfe.even-better-toml
-      redhat.vscode-yaml
-      redhat.vscode-xml
-      asciidoctor.asciidoctor-vscode
-      ms-python.python
-      ms-python.pylint
-      ms-python.vscode-pylance
-      ms-python.debugpy
-      ms-vscode-remote.remote-ssh
-      ms-vscode-remote.remote-containers
-      angular.ng-template
-      charliermarsh.ruff
-      jebbs.plantuml
-    ];
-    userSettings = {
-      "workbench.colorTheme" = "Default Light Modern";
-      "cSpell.language" = "pt-BR,en,pt";
-      "files.autoSave" = "afterDelay";
-      "ruff.nativeServer" = "on";
-      "ruff.path" = [ "/home/basis/.nix-profile/bin/ruff" ];
+    profiles.default = {
+      enableUpdateCheck = false;
+      enableExtensionUpdateCheck = false;
+      extensions = with pkgs.vscode-extensions; [
+        yzhang.markdown-all-in-one
+        jnoortheen.nix-ide
+        ms-azuretools.vscode-docker
+        tamasfe.even-better-toml
+        redhat.vscode-yaml
+        redhat.vscode-xml
+        asciidoctor.asciidoctor-vscode
+        ms-python.python
+        ms-python.pylint
+        ms-python.vscode-pylance
+        ms-python.debugpy
+        ms-vscode-remote.remote-ssh
+        ms-vscode-remote.remote-containers
+        angular.ng-template
+        charliermarsh.ruff
+        jebbs.plantuml
+      ];
+      userSettings = {
+        "workbench.colorTheme" = "Default Light Modern";
+        "cSpell.language" = "pt-BR,en,pt";
+        "files.autoSave" = "afterDelay";
+        "ruff.nativeServer" = "on";
+        "ruff.path" = [ "/home/basis/.nix-profile/bin/ruff" ];
+      };
     };
   };
   kitty = {
