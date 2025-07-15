@@ -16,7 +16,6 @@ with pkgs; [
     lens
     fzf
     eza
-    gimp
     remmina
     dive
     file
