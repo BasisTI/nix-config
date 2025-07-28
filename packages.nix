@@ -6,7 +6,6 @@ with pkgs; [
     unzip
     p7zip
     oh-my-posh
-    inputs.zen-browser.packages."${system}".beta
     bat
     maven
     gradle
@@ -14,6 +13,12 @@ with pkgs; [
     graphviz
     dbeaver-bin
     lens
+    btop
+    lsd
+    starship
+    carapace
+    jq
+    yq
     fzf
     eza
     remmina
@@ -37,12 +42,14 @@ with pkgs; [
     obsidian
     devcontainer
     neofetch
+    neovim
     jetbrains.idea-community
     git
     uv
     ruff
     dig
     kubectl
+    kubecm
     kubernetes-helm
     kubecolor
     k9s

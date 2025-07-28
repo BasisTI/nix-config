@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -48,39 +47,51 @@
       };
     };
   };
-  kitty = {
+  nvchad = {
     enable = true;
-    font = {
-      name = "JetBrains Mono";
-      size = 10;
-    };
-    keybindings = {
-      "ctrl+c" = "copy_or_interrupt";
-      "ctrl+v" = "paste_from_clipboard";
-      "ctrl+f>1" = "set_font_size 10";
-      "ctrl+f>2" = "set_font_size 20";
-      "ctrl+f>5" = "set_font_size 15";
-      "ctrl+shift+o" = "launch --location=hsplit";
-      "ctrl+shift+e" = "launch --location=vsplit";
-      "ctrl+shift+k" = "launch --location=split";
-      "ctrl+shift+j" = "layout_action rotate";
-      "shift+up" = "move_window up";
-      "shift+left" = "move_window left";
-      "shift+right" = "move_window right";
-      "shift+down" = "move_window down";
-      "ctrl+shift+up" = "layout_action move_to_screen_edge top";
-      "ctrl+shift+left" = "layout_action move_to_screen_edge left";
-      "ctrl+shift+right" = "layout_action move_to_screen_edge right";
-      "ctrl+shift+down" = "layout_action move_to_screen_edge bottom";
-      "ctrl+left" = "neighboring_window left";
-      "ctrl+right" = "neighboring_window right";
-      "ctrl+up" = "neighboring_window up";
-      "ctrl+down" = "neighboring_window down";
-    };
-    settings = {
-      scrollback_lines = 20000;
-      enable_audio_bell = false;
-    };
+    extraPackages = with pkgs; [
+      nodePackages.bash-language-server
+      docker-compose-language-service
+      dockerfile-language-server-nodejs
+      emmet-language-server
+      vscode-langservers-extracted
+      nixd
+      (python3.withPackages (
+        ps: with ps; [
+          python-lsp-server
+          pyright
+          flake8
+        ]
+      ))
+    ];
+    extraPlugins = ''
+      return 
+      {
+        { 
+        'javiorfo/nvim-soil',
+          dependencies = { 'javiorfo/nvim-nyctophilia' },
+          lazy = true,
+          ft = "plantuml",
+          opts = {
+              actions = {
+                  redraw = true
+              },
+              puml_jar = "/home/cedric/tools/plantuml/plantuml-asl-1.2025.2.jar",
+              image = {
+                  darkmode = false, -- Enable or disable darkmode
+                  format = "png", -- Choose between png or svg
+                  execute_to_open = function(img)
+                      return "nsxiv --scale-mode f −−anti−alias=yes -b " .. img
+                  end
+              }
+            }
+        }, 
+        {'terrastruct/d2-vim'}
+       }
+    '';
+    extraConfig = '''';
+    hm-activation = true;
+    backup = false;
   };
-
+  nix-init.enable = true;
 }
