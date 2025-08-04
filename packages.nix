@@ -55,7 +55,6 @@ with pkgs; [
     k9s
     kustomize
     k3d
-    rustdesk
     direnv
     nix-direnv
     sqlfluff
