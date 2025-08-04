@@ -29,7 +29,10 @@
     {
       homeConfigurations.${my_username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ 
+          ./home.nix 
+          inputs.nix4nvchad.homeManagerModule
+          ];
         extraSpecialArgs = {
           inherit inputs;
           inherit my_username;
